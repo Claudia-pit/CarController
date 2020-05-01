@@ -40,5 +40,41 @@ class ControlActivity : AppCompatActivity() {
             }
             false
         })
+
+        backward = findViewById(R.id.button_down)
+        backward.setOnTouchListener(OnTouchListener { v, event ->
+            if (event.action == MotionEvent.ACTION_DOWN) {
+                bluetoothHelper.write("B")
+                return@OnTouchListener true
+            } else if (event.action == MotionEvent.ACTION_UP) {
+                bluetoothHelper.write("S")
+                return@OnTouchListener true
+            }
+            false
+        })
+
+        right = findViewById(R.id.button_right)
+        right.setOnTouchListener(OnTouchListener { v, event ->
+            if (event.action == MotionEvent.ACTION_DOWN) {
+                bluetoothHelper.write("R")
+                return@OnTouchListener true
+            } else if (event.action == MotionEvent.ACTION_UP) {
+                bluetoothHelper.write("S")
+                return@OnTouchListener true
+            }
+            false
+        })
+
+        left = findViewById(R.id.button_left)
+        left.setOnTouchListener(OnTouchListener { v, event ->
+            if (event.action == MotionEvent.ACTION_DOWN) {
+                bluetoothHelper.write("L")
+                return@OnTouchListener true
+            } else if (event.action == MotionEvent.ACTION_UP) {
+                bluetoothHelper.write("S")
+                return@OnTouchListener true
+            }
+            false
+        })
     }
 }
