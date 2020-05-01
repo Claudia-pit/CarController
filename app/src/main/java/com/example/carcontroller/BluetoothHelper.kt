@@ -49,4 +49,10 @@ object BluetoothHelper {
         }
     }
 
+    fun write(message: String) {
+        if (bluetoothSocket!!.isConnected){
+            outputStream!!.write(message.toByteArray())
+        }
+    }
+
 }
