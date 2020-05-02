@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
         bluetoothDisconnect = findViewById(R.id.bluetooth_disconnect)
         bluetoothDisconnect.setOnClickListener {
-            BluetoothHelper.disconnession()
+            BluetoothHelper.disconnection()
             val toast = Toast.makeText(this, "Disconnesso", Toast.LENGTH_LONG)
             toast.show()
         }

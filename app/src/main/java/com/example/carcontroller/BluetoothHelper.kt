@@ -27,7 +27,7 @@ object BluetoothHelper {
         return devicesList
     }
 
-    fun setConnession(address: String) : Boolean {
+    fun setConnection(address: String) : Boolean {
 
         bluetoothDevice = bluetoothAdapter.getRemoteDevice(address)
         bluetoothSocket = bluetoothDevice!!.createRfcommSocketToServiceRecord(UUID.fromString("00001101-0000-1000-8000-00805F9B34FB"))
@@ -43,7 +43,7 @@ object BluetoothHelper {
         return bluetoothSocket!!.isConnected
     }
 
-    fun disconnession(){
+    fun disconnection(){
         bluetoothSocket?.let {
             it.close()
         }

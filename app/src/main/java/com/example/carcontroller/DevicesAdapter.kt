@@ -26,7 +26,7 @@ class DevicesAdapter(val context: Context, val devices: MutableList<BluetoothDev
         holder!!.deviceName.text = "${device.name} : ${device.address}"
 
         holder.itemView.setOnClickListener {
-            if(BluetoothHelper.setConnession(device.address)){
+            if(BluetoothHelper.setConnection(device.address)){
                 (context as Activity).finish()
                 val toast = Toast.makeText(context, "Connesso!", Toast.LENGTH_LONG)
                 toast.show()
